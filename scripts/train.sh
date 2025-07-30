@@ -28,12 +28,9 @@ checkpoints_total_limit=20
 num_train_epochs=1
 max_grad_norm=1.0
 
-# VAE_PATH="/path/to/vae"  # madebyollin/sdxl-vae-fp16-fix
-# IMAGE_ENCODER_PATH="/path/to/image_encoder"  # laion/CLIP-ViT-bigG-14-laion2B-39B-b160k
-# MODEL_NAME="/path/to/sdxl"  # stabilityai/stable-diffusion-xl-base-1.0
-VAE_PATH="/mnt/workspace/yinu/personalized_diffusion/pretrain_models/huggingface/hub/models--madebyollin--sdxl-vae-fp16-fix/snapshots/4df413ca49271c25289a6482ab97a433f8117d15"  # madebyollin/sdxl-vae-fp16-fix
-IMAGE_ENCODER_PATH="/mnt/workspace/yinu/personalized_diffusion/pretrain_models/huggingface/hub/models--h94--IP-Adapter/snapshots/92a2d51861c754afacf8b3aaf90845254b49f219/sdxl_models/image_encoder"  # laion/CLIP-ViT-bigG-14-laion2B-39B-b160k
-MODEL_NAME="/mnt/workspace/yinu/personalized_diffusion/pretrain_models/modelscope/hub/AI-ModelScope/stable-diffusion-xl-base-1.0"  # stabilityai/stable-diffusion-xl-base-1.0
+VAE_PATH="/path/to/vae"  # madebyollin/sdxl-vae-fp16-fix
+IMAGE_ENCODER_PATH="/path/to/image_encoder"  # laion/CLIP-ViT-bigG-14-laion2B-39B-b160k
+MODEL_NAME="/path/to/sdxl"  # stabilityai/stable-diffusion-xl-base-1.0
 
 if [ ${local_test} -eq 1 ];
 then
