@@ -76,8 +76,8 @@ ms_model.to(device, dtype=torch.float16)
 
 image0 = Image.open("./examples/example_dog.jpg")
 image1 = Image.open("./examples/example_cat.jpg")
-input_images = [image0]
-# input_images = [image0, image1]
+#input_images = [image0]
+input_images = [image0, image1]
 input_images = [x.convert("RGB").resize((512, 512)) for x in input_images]
 
 # generation configs
