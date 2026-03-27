@@ -71,14 +71,14 @@ input_images = [x.convert("RGB").resize((512, 512)) for x in input_images]
 
 # generation configs
 num_samples = 5
-prompt = "best quality, high quality, a dog on the beach"
-# prompt = "best quality, high quality, a dog and cat on the beach"
+#prompt = "best quality, high quality, a dog on the beach"
+prompt = "best quality, high quality, a dog and cat on the beach"
 print(prompt)
-boxes = [[[0.25, 0.25, 0.75, 0.75]]]  # dog
-# boxes = [[[0., 0.25, 0.4, 0.75], [0.6, 0.25, 1., 0.75]]]  # dog+cat
+#boxes = [[[0.25, 0.25, 0.75, 0.75]]]  # dog
+boxes = [[[0., 0.25, 0.4, 0.75], [0.6, 0.25, 1., 0.75]]]  # dog+cat
 # boxes = [[[0., 0., 0., 0.], [0., 0., 0., 0.]]]  # used if you want no layout guidance
-phrases = [["dog"]]
-# phrases = [["dog", "cat"]]
+#phrases = [["dog"]]
+phrases = [["dog", "cat"]]
 drop_grounding_tokens = [0]  # set to 1 if you want to drop the grounding tokens
 
 # used to get the attention map, return zero if the phrase is not in the prompt
