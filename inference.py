@@ -46,7 +46,12 @@ pipe = StableDiffusionXLPipeline.from_pretrained(
     torch_dtype=torch.float16,
     add_watermarker=False,
 )
+#pipe.to(device)
+
 pipe.to(device)
+pipe.enable_vae_slicing()
+pipe.enable_vae_tiling()
+
 
 image_encoder_type = "clip"
 image_encoder = CLIPVisionModelWithProjection.from_pretrained(image_encoder_path).to(device, dtype=torch.float16)
